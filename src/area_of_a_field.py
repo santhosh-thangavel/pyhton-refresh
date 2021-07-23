@@ -1,0 +1,5 @@
+length_of_field = float(input(f"Enter the length of field in feet: "))
+width_of_field = float(input(f"Enter the width of field in feet: "))
+area_of_field_in_feet = (length_of_field*width_of_field)
+conversion_in_to_acres = round(area_of_field_in_feet*0.00002296, 5)
+print(f"Area fo the field in acres - {conversion_in_to_acres} acres")
