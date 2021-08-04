@@ -31,8 +31,8 @@ resolve.has_host("google.com")
 
 # Results
 
-# False - "No host "pluralsight.com"
-# 52.24.147.215 "host is now "pluralsight"
+# False - "No host "google.com"
+# 52.24.147.215 "host is now "google.com"
 # True has_host is true now
 # None cache is cleared
 # False As cache is cleared, no_host and hence False
