@@ -23,11 +23,11 @@ class Resolver:
 
 
 resolve = Resolver()
-resolve.has_host("pluralsight.com")
-resolve("pluralsight.com")
-resolve.has_host("pluralsight.com")
+resolve.has_host("google.com")
+resolve("google.com")
+resolve.has_host("google.com")
 resolve.clear()
-resolve.has_host("pluralsight.com")
+resolve.has_host("google.com")
 
 # Results
 
