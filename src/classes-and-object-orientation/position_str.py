@@ -37,6 +37,7 @@ class Position:
         # return f"{self.__class__.__name__}(latitude = {self.latitude}, longitude = {self.longitude})"
         return f"{type(self).__name__}(latitude = {self.latitude}, longitude = {self.longitude})"
 
+    # ------------------------------------------repr-------------------------------------------------------
     # type of returned string is ideally formatted as a source code for a constructor call
     # class of an object is same as type of an object which is
     # return return f"{type(self).__name__}(latitude = {self.latitude}, longitude = {self.longitude})"
@@ -48,6 +49,7 @@ class Position:
     # will get the Type of the obj and then its class using __name__
     # return f"{typename(self)}(latitude = {self.latitude}, longitude = {self.longitude})"
     # the above line is expected to work but it doesn't
+    # ----------------------------------------------------------------------------------------------------------
 
     def __str__(self):
         return (
