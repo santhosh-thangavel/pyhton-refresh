@@ -50,30 +50,31 @@ class MarsPosition(Position):
     pass
 
 
-sydney = Position(-20, 32)
-print(repr(sydney))
-r = repr(sydney)
-print(eval(r))
-print(bool(repr(sydney) == eval(r)))  # the objects are different
+# sydney = Position(-20, 32)
+# print(repr(sydney))
+# r = repr(sydney)
+# print(eval(r))
+# print(bool(repr(sydney) == eval(r)))  # the objects are different
+#
+# london = EarthPosition(70, 120)
+# print(london)
+# print(repr(london))
+# print(eval(repr(london)))
+# print(bool(repr(london) == eval(repr(london))))  # the objects are different
+#
+#
+# mars_mountain = MarsPosition(20, 36)
+# print(mars_mountain)
+# print(repr(mars_mountain))
+# print(eval(repr(mars_mountain)))
+# print(
+#     bool(repr(mars_mountain) == eval(repr(mars_mountain)))
+# )  # the objects are different
+#
+# print(str(mars_mountain))
+# print(format(mars_mountain))
 
-london = EarthPosition(70, 120)
-print(london)
-print(repr(london))
-print(eval(repr(london)))
-print(bool(repr(london) == eval(repr(london))))  # the objects are different
-
-
-mars_mountain = MarsPosition(20, 36)
-print(mars_mountain)
-print(repr(mars_mountain))
-print(eval(repr(mars_mountain)))
-print(
-    bool(repr(mars_mountain) == eval(repr(mars_mountain)))
-)  # the objects are different
-
-print(str(mars_mountain))
-print(format(mars_mountain))
-
+# ----------------------------------------------------------------------------------------
 # Results
 # Position(latitude = -20, longitude = 32)
 # Position(latitude = -20, longitude = 32)
