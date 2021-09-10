@@ -1,5 +1,4 @@
 import inspect
-from numpy import typename
 from position import *
 
 
@@ -16,7 +15,7 @@ def auto_repr(cls):
 
     sig = inspect.signature(cls.__init__)
     parameter_names = list(sig.parameters)[1:]
-    print("__init__ parameter names:", parameter_names)
+    # print("__init__ parameter names:", parameter_names)
 
     if not all(
         isinstance(members.get(name, None), property) for name in parameter_names
@@ -28,7 +27,7 @@ def auto_repr(cls):
 
     def synthesized_repr(self):
         return "{typename}({args})".format(
-            typename=typename(self),
+            typename=type(self).__name__,
             args=", ".join(
                 "{name}={value}".format(name=name, value=getattr(self, name))
                 for name in parameter_names
@@ -54,11 +53,12 @@ class Location:
     def position(self):
         return self._position
 
-    # def __repr__(self):
+    # def __repr__(self):       Line 5 - 42 @auto_repr does the same work
     #     return f"{type(self).__name__}(name = {self.name}, position = {self.position})"
+
     #
-    def __str__(self):
-        return f"{self.name}"
+    # def __str__(self):
+    #     return f"{self.name}"
 
 
 hong_kong = Location("Hong Kong", EarthPosition(22.29, 114.16))
@@ -67,5 +67,8 @@ hong_kong = Location("Hong Kong", EarthPosition(22.29, 114.16))
 # rotterdam = Location("Rotterdam", EarthPosition(51.96, 4.47))
 # maracaibo = Location("Maracaibo", EarthPosition(10.65, -71.65))
 
-hong_kong
+# hong_kong
+# print(hong_kong.__repr__())
+# print(hong_kong.name)
+# print(hong_kong.position)
 print(hong_kong)
