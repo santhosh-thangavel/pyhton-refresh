@@ -1,4 +1,40 @@
+# ..Lets do some documentation
+# using sphinx
+
+"""
+Welcome to Documentation Demo
+=============================
+
+The examples below shows how to use arbitrary positional arguments and keyword arguments
+
+This is a subtitle
+------------------
+
+Code example. Positional argument cannot follow keyword argument::
+
+def not_allowed(**kwargs, *args):
+    print(args)
+    print(kwargs)
+
+This is a second subtitle
+-------------------------
+
+We will discuss later.
+
+
+Arbitrary positional and keyword arguments
+------------------------------------------
+"""
+
+
 def start_up_name(args1, **kwargs):
+    """
+
+    :param args1: positional argument
+    :param kwargs: arbitary keyword argument
+    :return: None
+    read documentation for the :meth:print_args method.
+    """
     print(args1)
     print(kwargs)
     # print(type(kwargs))
@@ -37,6 +73,16 @@ print_args(1, 2, 3, 4, 5)
 
 
 def print_args(arg1, arg2, *args, kwarg1, kwarg2):
+    """
+
+    :param arg1: positional argument
+    :param arg2: positional argument
+    :param args: arbitrary positional argument
+    :param kwarg1: key word argument
+    :param kwarg2: key word argument
+    :return: None
+    read documentation for the :meth:avoid_arbitrary_positional_argument method
+    """
     print(arg1)
     print(arg2)
     print(args)
