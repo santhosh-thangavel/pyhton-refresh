@@ -3,7 +3,7 @@ import socket
 
 class Resolver:
     """
-    An example of fanctions with state between calls
+    An example of functions with state between calls
     """
 
     def __init__(self):
